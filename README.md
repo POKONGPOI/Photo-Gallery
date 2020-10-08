@@ -1,2 +1,2 @@
 Picture-material
-个人用图库
+个人用收录图库
