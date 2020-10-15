@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
   <body>
     <div class="images glide">
       <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
+        <ul id="box" class="glide__slides">
           <li class="glide__slide">
             <img src="img/1.jpg" alt="">
           </li>
@@ -81,7 +81,17 @@
         <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-arrow-right"></i></button>
       </div>
     </div>
+    <script type="text/javascript">
+        var oUL = document.getElementById("box");
+        var html = '';
+        for (var i = 0; i < 55; i++)
+        {
+            html += "<li 
+            style = 'background-image;url(img/" + i +".jpg)' ></li >"
 
+        }
+        oUL.innerHTML = html
+    </script>
     <script>
       new Glide(".images",{
         type: 'carousel',
