@@ -74,7 +74,6 @@
             <img src="img/15.jpg" alt="">
           </li>
         </ul>
-         <div><li>navi</li></div>
       </div>
 
       <div class="glide__arrows" data-glide-el="controls">
@@ -99,59 +98,5 @@
         }
       }).mount();
     </script>
- <script>
- 
-
-$('.glide__slide').each(function(index)
-{
-    $(this).attr('id', 'img' + (index + 1));
-});
-    
-$('.glide__slide').each(function(){
-  $('#navi').append('<li class="glide__slide">');
-});
-  
-$('.glide__slide').each(function(index)
-{
-    $(this).attr('id', 'circle' + (index + 1));
-});   
-   
-$('.portfolio').click(function(){
-if($(this).hasClass('opened')){
-    $(this).removeClass('opened');
-    $(".glide__slide").fadeIn("fast");
-    $(this).find('.ombra').fadeOut();
-    $("#navi li").removeClass("activenav");
-}
-else{
-	var indexi = $("#maincontent .glide__slide").index(this) + 1;
-    $(this).addClass('opened'); 
-    $(".glide__slide").not(this).fadeOut("fast");
-    $(this).find('.ombra').fadeIn();
-    $("#glide__slide" + indexi).addClass('activenav'); 
-}
-});	
-
-//navi buttons
-$("#navi li").click(function() {
-if($(this).hasClass("activenav")){
-	return false;
-}
-		
-	$("#navi li").removeClass("activenav");
-	$(".glide__slide").removeClass('opened');
-	$(".glide__slide").show();
-        $('.ombra').hide();
-		
-	var index = $("#navi li").index(this) + 1;
-	$("#img" + index).addClass('opened'); 
-    $(".glide__slide").not("#img" + index).fadeOut("fast");
-    $("#img" + index).find('.ombra').fadeIn();
-        
-    $(this).addClass("activenav");
-});
-    
-    
-</script>
   </body>
 </html>
