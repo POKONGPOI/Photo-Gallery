@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -7,7 +7,6 @@
     <script src="glide.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="glide.core.min.css">
     <link rel="stylesheet" href="glide.theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -26,15 +25,15 @@
     </div>
 
     <script type="text/javascript">
-
-        var oUL = document.getElementByTagName("ul");
+{
+        var oUL = document.getElementByID("li");
         var ul = '';
         for (var i = 1; i < 20; i++)
         {
             ul += "<li class= 'glide__slide'><img src=(img/"+i+".jpg)></li >"
         }
-oUL.innerHTML = html;
-
+       document.write（"<li class= 'glide__slide'><img src=(img/"+i+".jpg)></li >"）
+}
     </script>
 
     <script>
