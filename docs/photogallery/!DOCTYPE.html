@@ -1,56 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script src="glide.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="glide.core.min.css">
-    <link rel="stylesheet" href="glide.theme.min.css">
-    <link rel="stylesheet" href="style.css">
+<html>
+  <head><title>范例1111</title>
+    <script language="JavaScript">
+        function changeImg()
+        {
+            newImage = new Image() ;
+            newImage.src = "1.jpg" ;
+        }
+    </script>
   </head>
 
-  <body>
-    <div class="images glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides" >
-
-        </ul>
-      </div>
-
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-arrow-left"></i></button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-arrow-right"></i></button>
-      </div>
-    </div>
-
-    <script type="text/javascript">
-{
-        var oUL = document.getElementByID("li");
-        var ul = '';
-        for (var i = 1; i < 20; i++)
-        {
-            ul += "<li class= 'glide__slide'><img src=(img/"+i+".jpg)></li >"
-        }
-       document.write（"<li class= 'glide__slide'><img src=(img/"+i+".jpg)></li >"）
-}
-    </script>
-
-    <script>
-      new Glide(".images",{
-        type: 'carousel',
-        perView: 5,
-        focusAt: 'center',
-        gap: 40,
-        breakpoints: {
-          1200:{
-            perView: 3
-          },
-          800:{
-            perView: 2
-          }
-        }
-      }).mount();
-    </script>
+  <body onload="javascript:changeImg()">
+      <a href="img/1.jpg" onMouseOver="javascript:document.img1.src='img/2.jpg'">
+      <img name="img1" src="img/1.jpg" /></a>
   </body>
 </html>
