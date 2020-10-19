@@ -12,9 +12,10 @@
   </head>
 
   <body>
+
     <div class="images glide">
       <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides" >
+        <ul class="glide__slides" id="box">
 
           <li class="glide__slide">
             <img src="img/1.jpg">
@@ -66,15 +67,7 @@
     </div>
 
     <script type="text/javascript">
-
-        var oUL = document.getElementByTagName("ul");
-        var ul = '';
-        for (var i = 1; i < 20; i++)
-        {
-            ul += "<li class= 'glide__slide'><img src=(img/"+i+".jpg)></li >"
-        }
-oUL.innerHTML = html;
-
+     
     </script>
 
     <script>
@@ -84,14 +77,15 @@ oUL.innerHTML = html;
         focusAt: 'center',
         gap: 40,
         breakpoints: {
-          1200:{
+          1680:{
             perView: 3
           },
-          800:{
+          1050:{
             perView: 2
           }
         }
       }).mount();
     </script>
+
   </body>
 </html>
